@@ -1,0 +1,1 @@
+<div class="transition transform hover:scale-110 hover-text-amber-300 wow fadeInUp">{{ $slot }}</div>
