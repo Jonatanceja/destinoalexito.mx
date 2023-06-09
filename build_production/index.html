@@ -12,7 +12,7 @@
         <meta property="og:description" content="¡Pronto podrás encontrar todo lo que necesitas para alcanzar tus metas y lograr el éxito.!" />
         <meta property="og:url" content="/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/assets/images/logo.png" />
+        <meta property="og:image" content="/assets/images/destino-al-exito.jpg" />
         <meta property="og:image:alt" content="Destino al Éxito" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -22,19 +22,46 @@
         <link rel="manifest" href="/assets/images/site.webmanifest">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=e56e99e361563f82d288c70d64f55662">
-        <link rel="stylesheet" href="assets/build/css/animate.css">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://destinoalexito.mx/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Destino al Éxito">
+        <meta property="og:description" content="¡Pronto podrás encontrar todo lo que necesitas para alcanzar tus metas y lograr el éxito.!">
+        <meta property="og:image" content="https://destinoalexito.mx/assets/images/destino-al-exito.jpg">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="destinoalexito.mx">
+        <meta property="twitter:url" content="https://destinoalexito.mx/">
+        <meta name="twitter:title" content="Destino al Éxito">
+        <meta name="twitter:description" content="¡Pronto podrás encontrar todo lo que necesitas para alcanzar tus metas y lograr el éxito.!">
+        <meta name="twitter:image" content="https://destinoalexito.mx/assets/images/destino-al-exito.jpg">
+
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=89fa80f565d1dd5ddc02f0b849b7fd77">
+        <link rel="stylesheet" href="/assets/build/css/animate.css">
         <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
         <script defer src="/assets/build/js/main.js?id=9a3976b92064a906dd1560b2bb4e8ca2"></script>
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.3.5/dist/alpine.js" defer></script>
-        <script src="assets/build/js/wow.min.js"></script>
+        <script src="/assets/build/js/wow.min.js"></script>
         <script>
         new WOW().init();
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-82Z2668958"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-82Z2668958');
         </script>
     </head>
     <body class="text-zinc-300 font-sans antialiased bg-zinc-900 scroll-smooth">
         <nav
-    class="flex items-center justify-between flex-wrap p-4 fixed w-full z-50 top-0 text-white"
+    class="flex items-center justify-between flex-wrap p-4 fixed w-full z-40 top-0 text-white x-cloak"
     x-data="{ isOpen: false }"
     @keydown.escape="isOpen = false"
     :class="{ 'shadow-xl bg-black/90' : isOpen , 'bg-transparent' : !isOpen}"
@@ -128,8 +155,50 @@
         <section class="h-screen flex items-center relative w-full" id="hero">
     <div class="container mx-auto max-w-5xl z-20 px-5 md:px-0 relative h-screen flex items-center">
         <h1 class="text-6xl md:text-9xl text-white wow fadeInLeft"><span class="text-4xl md:text-6xl">Cumple tus</span><br> Sueños</h1>
-        <p class="absolute md:text-xl w-full md:w-1/2 md:bottom-24 bottom-32 left-0 px-5 md:px-0 wow  fadeInLeft"
-        data-wow-delay="0.5s">Hay algo en común que tienen todas los grandes artistas en la historia de la música; alguien confió en ellos para poder mostrar su talento al público.</p>
+        <div class="absolute md:text-lg w-full md:w-1/2 md:bottom-24 bottom-32 left-0 px-5 md:px-0 wow fadeInLeft space-y-3"
+        data-wow-delay="0.5s">
+            <p>Hay algo en común que tienen todas los grandes artistas en la historia de la música; alguien confió en ellos para poder mostrar su talento al público.</p> 
+            <div class="block md:hidden" x-data="{ isOpen: false }">
+                <button @click="isOpen = true" class="bg-transparent hover:bg-white text-white hover:text-black font-bold py-2 px-4 rounded border-2 border-white transition">
+                  Ver Video 
+                </button>
+              
+                <div x-show="isOpen" class="fixed z-50 inset-0 flex items-center justify-center">
+                  <div @click.away="isOpen = false" class="fixed inset-0 bg-black opacity-75"></div>
+              
+                  <div class="bg-black p-10 rounded max-w-3xl relative">
+                    <div class="relative pb-9/16">
+                      <iframe
+                        src="https://www.youtube.com/embed/3R551xXk2n4"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <button @click="isOpen = false" class="absolute top-0 right-0 text-white hover:text-gray-200 p-2">
+                      <i class="lni lni-close"></i>
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <div class="hidden md:block" x-data="{ isOpen: false }">
+                <button @click="isOpen = true" class="bg-transparent hover:bg-white text-white hover:text-black font-bold py-2 px-4 rounded border-2 border-white transition">
+                Ver Video 
+                </button>
+            
+                <div x-show="isOpen" class="fixed z-50 inset-0 flex items-center justify-center">
+                <div @click.away="isOpen = false" class="fixed inset-0 bg-black opacity-75"></div>
+            
+                <div class="bg-black p-10 rounded max-w-3xl relative">
+                    <div class="relative pb-9/16">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3R551xXk2n4" title="Destino al Éxito" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </div>
+                    <button @click="isOpen = false" class="absolute top-0 right-0 text-white hover:text-gray-200 p-2">
+                    <i class="lni lni-close"></i>
+                    </button>
+                </div>
+                </div>
+            </div>    
+        </div>
     </div>
     <div class="md:flex top-0 left-0 h-screen w-full absolute">
         <div class="w-full md:w-1/2 h-1/2 md:h-full bg-cover bg-top md:bg-center md:hidden wow fadeIn" style="background-image: url(/assets/images/hero.jpg)" data-wow-delay="0.75s"></div>
@@ -147,8 +216,9 @@
         <div class="grid grid-cols-1 md:grid-cols-5">
             <div class="col-span-3 px-5 md:px-0 py-10">
                 <div class="md:hidden block space-y-5">
+                    <img class="w-12 wow fadeIn" src="/assets/images/d_estrella.svg" alt="">
                     <h2 class="text-2xl text-white uppercase wow fadeInLeft">El show para descubrir el <span class="text-amber-400">talento musical.</span></h2>
-                    <p class="wow fadeInLeft" data-wow-delay="0.5s">En 2023 nace <span class="font-bold text-amber-500">Destino al éxito®</span>el nuevo programa que: BUSCARÁ, EXPONDRÁ y PREMIARÁ el talento musical de personas que busquen cumplir su sueño y seguir el Destino al éxito.</p>
+                    <p class="wow fadeInLeft" data-wow-delay="0.5s">En 2023 nace <span class="font-bold text-amber-500">Destino al éxito® </span>el nuevo programa que: BUSCARÁ, EXPONDRÁ y PREMIARÁ el talento musical de personas que busquen cumplir su sueño y seguir el Destino al éxito.</p>
                 </div>
             </div>
             <div class="col-span-2 relative w-full">
@@ -164,8 +234,9 @@
     <div class="md:block hidden">
         <div class="grid grid-cols-1 md:grid-cols-5 items-center container max-w-5xl mx-auto absolute inset-0 w-full">
             <div class="col-span-3 space-y-5">
+                <img class="w-12 wow fadeIn" src="/assets/images/d_estrella.svg" alt="">
                 <h2 class="text-2xl text-white uppercase wow fadeInLeft">El show para descubrir el <span class="text-amber-400">talento musical.</span></h2>
-                <p class="wow fadeInLeft" data-wow-delay="0.5s">En 2023 nace Destino al éxito el nuevo programa que: BUSCARÁ, EXPONDRÁ y PREMIARÁ el talento musical de personas que busquen cumplir su sueño y seguir el Destino al éxito.</p>
+                <p class="wow fadeInLeft" data-wow-delay="0.5s">En 2023 nace <span class="font-bold text-amber-500">Destino al éxito® </span>el nuevo programa que: BUSCARÁ, EXPONDRÁ y PREMIARÁ el talento musical de personas que busquen cumplir su sueño y seguir el Destino al éxito.</p>
             </div>
             <div class="col-span-2">
                 <div class="">
@@ -173,9 +244,9 @@
             </div>
         </div>
     </div>
-</section><section class="py-12 md:py-20 px-5 md:px-0 border-t border-zinc-300" id="contestants">
+</section><section class="py-12 md:py-20 px-5 md:px-0 border-t border-zinc-300 bg-repeat bg-fixed bg-opacity-50" id="contestants" style="background-image: url(/assets/images/pattern.svg)">
     <div class="container mx-auto max-w-5xl space-y-10">
-        <h2 class="text-2xl text-white uppercase wow fadeInLeft">Participantes</h2>
+        <h2 class="text-2xl text-white uppercase wow fadeInLeft">Participantes.</h2>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
             <div class="bg-zinc-900 border-4 border-pink-600 rounded-full mx-auto relative group transition duration-75 transform hover:scale-105 wow fadeInUp">
                 <img class="w-full h-full rounded-full opacity-20" src="/assets/images/1.svg" alt="">
@@ -259,6 +330,7 @@
             </div>
             <div class="col-span-3 px-5 md:px-0 py-10">
                 <div class="md:hidden block space-y-5">
+                    <img class="w-12 wow fadeIn" src="/assets/images/d_estrella.svg" alt="">
                     <h2 class="text-2xl text-white uppercase wow fadeInLeft">Expertos en el arte de la <span class="text-amber-400">musica.</span></h2>
                     <p class="wow fadeInLeft" data-wow-delay="0.5s">Quédate al pendiente de nuestras redes sociales donde próximamente daremos a conocer nuestro calificado y reconocido jurado.</p>
                     <button class="bg-pink-500 text-white py-3 px-6 rounded border-b-2 border-r-2 hover:border-r-4 hover:border-b-4 border-purple-700 uppercase transform transition hover:-translate-x-1 hover:-translate-y-1 hover:bg-pink-400">
@@ -275,17 +347,18 @@
                 </div>
             </div>
             <div class="col-span-3 space-y-5">
+                <img class="w-12 wow fadeIn" src="/assets/images/d_estrella.svg" alt="">
                 <h2 class="text-2xl text-white uppercase wow fadeInLeft">Expertos en el arte de la <span class="text-amber-500">musica.</span></h2>
                 <p class="wow fadeInLeft" data-wow-delay="0.5s">Quédate al pendiente de nuestras redes sociales donde próximamente daremos a conocer nuestro calificado y reconocido jurado.</p>
                 <button class="bg-pink-500 text-white py-3 px-6 rounded border-b-2 border-r-2 hover:border-r-4 hover:border-b-4 border-purple-700 uppercase transform transition hover:-translate-x-1 hover:-translate-y-1 hover:bg-pink-400">
-                    <a href="">Más informes</a>
+                    <a href="https://api.whatsapp.com/send?phone=523314390428&amp;text=Me%20interesa%20saber%20m%C3%A1s%20sobre%20el%20concurso" target="blank">Más informes</a>
                 </button>
             </div>
         </div>
     </div>
 </section>        <footer class="py-10 border-t border-zinc-300 px-5">
     <div class="container max-w-5xl mx-auto block md:flex items-center space-y-5 md:space-y-0">
-        <div class="w-full md:w-2/3 text-center md:text-left">Todos los derechos reservados Destino al Éxito® 2023</div>
+        <div class="w-full md:w-2/3 text-center md:text-left">Todos los derechos reservados Destino al Éxito® 2023 | <a class="text-xs hover:text-amber-400" href="/legal/terminos-y-condiciones">Términos y Condiciones</a></div>
         <div class="flex justify-center md:justify-end space-x-5 text-amber-400 text-2xl w-full md:w-1/3">
             <div class="transition transform hover:scale-110 hover-text-amber-300 wow fadeInUp"><a href=""><i class="lni lni-youtube transform"></i></a></div>            <div class="transition transform hover:scale-110 hover-text-amber-300 wow fadeInUp"><a href=""><i class="lni lni-tiktok-alt"></i></a></div>            <div class="transition transform hover:scale-110 hover-text-amber-300 wow fadeInUp"><a href=""><i class="lni lni-instagram-original"></i></a></div>            <div class="transition transform hover:scale-110 hover-text-amber-300 wow fadeInUp"><a href=""><i class="lni lni-facebook-original"></i></a></div>        </div>
     </div>

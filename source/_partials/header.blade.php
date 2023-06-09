@@ -1,5 +1,5 @@
   <nav
-    class="flex items-center justify-between flex-wrap p-4 fixed w-full z-50 top-0 text-white"
+    class="flex items-center justify-between flex-wrap p-4 fixed w-full z-40 top-0 text-white x-cloak"
     x-data="{ isOpen: false }"
     @keydown.escape="isOpen = false"
     :class="{ 'shadow-xl bg-black/90' : isOpen , 'bg-transparent' : !isOpen}"

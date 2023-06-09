@@ -11,6 +11,7 @@
             </div>
             <div class="col-span-3 px-5 md:px-0 py-10">
                 <div class="md:hidden block space-y-5">
+                    <img class="w-12 wow fadeIn" src="/assets/images/d_estrella.svg" alt="">
                     <x-h2>Expertos en el arte de la <span class="text-amber-400">musica.</span></x-h2>
                     <p class="wow fadeInLeft" data-wow-delay="0.5s">Quédate al pendiente de nuestras redes sociales donde próximamente daremos a conocer nuestro calificado y reconocido jurado.</p>
                     <button class="bg-pink-500 text-white py-3 px-6 rounded border-b-2 border-r-2 hover:border-r-4 hover:border-b-4 border-purple-700 uppercase transform transition hover:-translate-x-1 hover:-translate-y-1 hover:bg-pink-400">
@@ -27,10 +28,11 @@
                 </div>
             </div>
             <div class="col-span-3 space-y-5">
+                <img class="w-12 wow fadeIn" src="/assets/images/d_estrella.svg" alt="">
                 <x-h2>Expertos en el arte de la <span class="text-amber-500">musica.</span></x-h2>
                 <p class="wow fadeInLeft" data-wow-delay="0.5s">Quédate al pendiente de nuestras redes sociales donde próximamente daremos a conocer nuestro calificado y reconocido jurado.</p>
                 <button class="bg-pink-500 text-white py-3 px-6 rounded border-b-2 border-r-2 hover:border-r-4 hover:border-b-4 border-purple-700 uppercase transform transition hover:-translate-x-1 hover:-translate-y-1 hover:bg-pink-400">
-                    <a href="">Más informes</a>
+                    <a href="{{ $page->whatsapp }}" target="blank">Más informes</a>
                 </button>
             </div>
         </div>

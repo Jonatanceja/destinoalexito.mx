@@ -1,6 +1,6 @@
-<section class="py-12 md:py-20 px-5 md:px-0 border-t border-zinc-300" id="contestants">
+<section class="py-12 md:py-20 px-5 md:px-0 border-t border-zinc-300 bg-repeat bg-fixed bg-opacity-50" id="contestants" style="background-image: url(/assets/images/pattern.svg)">
     <div class="container mx-auto max-w-5xl space-y-10">
-        <x-h2>Participantes</x-h2>
+        <x-h2>Participantes.</x-h2>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
             <div class="bg-zinc-900 border-4 border-pink-600 rounded-full mx-auto relative group transition duration-75 transform hover:scale-105 wow fadeInUp">
                 <img class="w-full h-full rounded-full opacity-20" src="/assets/images/1.svg" alt="">
